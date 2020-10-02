@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="EmptyBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.jjoonleo.mycalendar.ui.month.calendar.ui.viewmodel.CalendarViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        android:orientation="vertical"
+        setBground="@{model.mCalendar}"
+        android:background="@drawable/outline">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            />
+
+        <TextView
+            setDayText="@{model.mCalendar}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textColor="#BCBCBC"
+            android:textSize="15sp"
+            tools:text="1" />
+
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data class="WeekCalendarFrBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.jjoonleo.mycalendar.ui.week.calendar.ui.viewmodel.WeekCalendarListViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#eaeae9"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outline"
+                android:gravity="center"
+                android:textColor="#BCBCBC"
+                android:textSize="9sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outline_up"
+                android:gravity="center"
+                android:text="@{model.DotW.get(0)}"
+                android:textColor="#BCBCBC"
+                android:textSize="9sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outline_up"                android:gravity="center"
+                android:textColor="#BCBCBC"
+                android:text="@{model.DotW.get(1)}"
+                android:textSize="9sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outline_up"                android:gravity="center"
+                android:textColor="#BCBCBC"
+                android:text="@{model.DotW.get(2)}"
+                android:textSize="9sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outline_up"                android:gravity="center"
+                android:textColor="#BCBCBC"
+                android:text="@{model.DotW.get(3)}"
+                android:textSize="9sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outline_up"                android:gravity="center"
+                android:textColor="#BCBCBC"
+                android:text="@{model.DotW.get(4)}"
+                android:textSize="9sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#BCBCBC"
+                android:background="@drawable/outline_up"
+                android:text="@{model.DotW.get(5)}"
+                android:textSize="9sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#BCBCBC"
+                android:background="@drawable/outline_up"
+                android:text="@{model.DotW.get(6)}"
+                android:textSize="9sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#eaeae9"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outline_down"
+                android:gravity="center"
+                android:textColor="#BCBCBC"
+                android:textSize="9sp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+                android:onClick="onButtonClicked"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outline_down"
+                android:gravity="center"
+                android:text="@{model.strings.get(0)}"
+                android:textColor="#BCBCBC"
+                android:textSize="9sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:onClick="onButtonClicked"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outline_down"                android:gravity="center"
+                android:textColor="#BCBCBC"
+                android:text="@{model.strings.get(1)}"
+                android:textSize="9sp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:onClick="onButtonClicked"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outline_down"                android:gravity="center"
+                android:textColor="#BCBCBC"
+                android:text="@{model.strings.get(2)}"
+                android:textSize="9sp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="0dp"
+                android:onClick="onButtonClicked"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outline_down"                android:gravity="center"
+                android:textColor="#BCBCBC"
+                android:text="@{model.strings.get(3)}"
+                android:textSize="9sp" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="0dp"
+                android:onClick="onButtonClicked"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/outline_down"                android:gravity="center"
+                android:textColor="#BCBCBC"
+                android:text="@{model.strings.get(4)}"
+                android:textSize="9sp" />
+
+            <Button
+                android:id="@+id/button6"
+                android:onClick="onButtonClicked"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#BCBCBC"
+                android:background="@drawable/outline_down"
+                android:text="@{model.strings.get(5)}"
+                android:textSize="9sp" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#BCBCBC"
+                android:onClick="onButtonClicked"
+                android:background="@drawable/outline_down"
+                android:text="@{model.strings.get(6)}"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pager_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</layout>
+

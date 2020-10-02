@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.jjoonleo.mycalendar.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.jjoonleo.mycalendar.ui.home.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+    android:id="@+id/nav_day"
+    android:name="com.jjoonleo.mycalendar.ui.day.DayFragment"
+    android:label="DayCalendar"
+    tools:layout="@layout/fragment_day" >
+        <action
+            android:id="@+id/action_nav_day_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_week"
+        android:name="com.jjoonleo.mycalendar.ui.week.WeekFragment"
+        android:label="WeekCalendar"
+        tools:layout="@layout/fragment_week" >
+        <action
+            android:id="@+id/action_nav_week_to_nav_day"
+            app:destination="@id/nav_day" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_month"
+        android:name="com.jjoonleo.mycalendar.ui.month.MonthFragment"
+        android:label="MonthCalendar"
+        tools:layout="@layout/fragment_month" >
+        <action
+            android:id="@+id/action_nav_month_to_nav_day"
+            app:destination="@id/nav_day" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="WeekHeaderBinding">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.jjoonleo.mycalendar.ui.week.calendar.ui.viewmodel.WeekHeaderViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        android:orientation="vertical"
+        android:background="@drawable/outline">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            setWeekCalendarHeaderText="@{model.mCalendar}"
+            android:textSize="10sp"
+            android:textColor="#EEEEEE"
+            android:id="@+id/textView"/>
+    </LinearLayout>
+
+</layout>
